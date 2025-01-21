@@ -4,6 +4,7 @@
 
 #vs-code
 .vscode
+*.code-workspace
 
 #Python
 __pycache__
