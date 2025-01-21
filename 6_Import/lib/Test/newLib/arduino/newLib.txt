@@ -1,0 +1,47 @@
+(*Set the state of the specified relay on the specifeid RLY08 board
+*)
+FUNCTION_BLOCK RLY_1
+  VAR_INPUT
+    B_AD : BYTE;
+    P_AD : BYTE;
+    RLY : BOOL;
+  END_VAR
+  VAR_OUTPUT
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+
+(*Set the states relays on the specified RLY08 board
+*)
+FUNCTION_BLOCK RLY_8
+  VAR_INPUT
+    B_AD : BYTE;
+    RLY1 : BOOL;
+    RLY2 : BOOL;
+    RLY3 : BOOL;
+    RLY4 : BOOL;
+    RLY5 : BOOL;
+    RLY6 : BOOL;
+    RLY7 : BOOL;
+    RLY8 : BOOL;
+  END_VAR
+  VAR_OUTPUT
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+
+(*Set the board address to the wanted one and update the config
+*)
+FUNCTION_BLOCK SET_ADDR
+  VAR_INPUT
+    CONFIG : BYTE;
+  END_VAR
+  VAR_OUTPUT
+    CONFIG : BYTE;
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+

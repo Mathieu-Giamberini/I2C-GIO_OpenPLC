@@ -1,0 +1,20 @@
+{
+  "name": "name",
+  "files": {
+    "arduino": {
+      "path": "./arduino",
+      "module": {
+        "path": "./arduino/module",
+        "modules": []
+      }
+    },
+    "matiec": {
+      "path": "./matiec"
+    },
+    "xml": {
+      "path": "./xml"
+    }
+  },
+  "generated": false,
+  "blocks": []
+}

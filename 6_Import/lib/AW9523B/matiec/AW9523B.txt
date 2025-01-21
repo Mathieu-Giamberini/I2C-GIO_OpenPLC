@@ -1,0 +1,82 @@
+(*
+* Return the state of the specified pin on the specified AW9523B board
+*
+*
+* DI_1
+* ———–
+*)
+(* Return the state of the specified pin on the specified AW9523B board
+*)
+FUNCTION_BLOCK DI_1
+  VAR_INPUT
+    B_AD : BYTE;
+    P_AD : BYTE;
+  END_VAR
+  VAR_OUTPUT
+    PIN : BOOL;
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK  
+(*
+*
+* Set the state of the specified pin on the specified AW9523B board
+*
+*)
+FUNCTION_BLOCK DQ_1
+  VAR_INPUT
+    B_AD : BYTE;
+    P_AD : BYTE;
+    PIN : BOOL;
+  END_VAR
+  VAR_OUTPUT
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+(*
+*
+* Return the states of the specified pins on the specified AW9523B board
+*
+*)
+FUNCTION_BLOCK DI_8
+  VAR_INPUT
+    B_AD : BYTE;
+    X : BOOL;
+  END_VAR
+  VAR_OUTPUT
+    PX_0 : BOOL;
+    PX_1 : BOOL;
+    PX_2 : BOOL;
+    PX_3 : BOOL;
+    PX_4 : BOOL;
+    PX_5 : BOOL;
+    PX_6 : BOOL;
+    PX_7 : BOOL;
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK
+(*
+*
+* Set the states of the specified pins on the specified AW9523B board
+*
+*)
+FUNCTION_BLOCK DQ_8
+  VAR_INPUT
+    B_AD : BYTE;
+    X : BOOL;
+    PX_0 : BOOL;
+    PX_1 : BOOL;
+    PX_2 : BOOL;
+    PX_3 : BOOL;
+    PX_4 : BOOL;
+    PX_5 : BOOL;
+    PX_6 : BOOL;
+    PX_7 : BOOL;
+  END_VAR
+  VAR_OUTPUT
+    DUMMY : BOOL;
+  END_VAR
+  DUMMY := 0;
+END_FUNCTION_BLOCK

@@ -1,0 +1,12 @@
+#OpenPLC version
+5_OpenPLC/*
+!README
+
+#vs-code
+.vscode
+
+#Python
+__pycache__
+
+#MC office 
+**/*~*

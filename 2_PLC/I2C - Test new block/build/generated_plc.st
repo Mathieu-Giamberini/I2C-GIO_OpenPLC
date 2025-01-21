@@ -1,0 +1,38 @@
+PROGRAM LED_Test1
+  VAR
+    DI_10 : DI_1;
+    DQ_80 : DQ_8;
+    RLY_10 : RLY_1;
+    RLY_11 : RLY_1;
+    RLY_12 : RLY_1;
+    _TMP_NOT19_OUT : BOOL;
+  END_VAR
+
+  DI_10(B_AD := 16#00, P_AD := 8#15);
+  DQ_80(B_AD := 16#00, X := 0, PX_2 := DI_10.PIN);
+  RLY_10(B_AD := 16#00, P_AD := 8#03, RLY := DI_10.PIN);
+  RLY_11(B_AD := 16#00, P_AD := 8#01, RLY := DI_10.PIN);
+  _TMP_NOT19_OUT := NOT(DI_10.PIN);
+  RLY_12(B_AD := 16#00, P_AD := 8#06, RLY := _TMP_NOT19_OUT);
+END_PROGRAM
+
+PROGRAM LED_Test2
+  VAR
+    DI_80 : DI_8;
+    DQ_10 : DQ_1;
+    RLY_80 : RLY_8;
+  END_VAR
+
+  DI_80(B_AD := 16#00, X := 1);
+  DQ_10(B_AD := 16#00, P_AD := 8#02, PIN := DI_80.PX_5);
+  RLY_80(B_AD := 16#00, RLY4 := DI_80.PX_5);
+END_PROGRAM
+
+
+CONFIGURATION Config0
+
+  RESOURCE Res0 ON PLC
+    TASK task0(INTERVAL := T#20ms,PRIORITY := 0);
+    PROGRAM instance0 WITH task0 : LED_Test1;
+  END_RESOURCE
+END_CONFIGURATION

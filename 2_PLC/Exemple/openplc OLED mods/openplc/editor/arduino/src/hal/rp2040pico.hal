@@ -1,0 +1,10 @@
+# HAL configuration
+# Format :
+# Board type, FQBN
+# Arduino CLI tool
+# https://arduino.github.io/arduino-cli/0.28/installation/#latest-packages
+# install the mbed OS for the RP2040 with the CLI tool
+# arduino-cli core install arduino:mbed_rp2040
+
+Raspberry Pico,		arduino:mbed_rp2040:pico
+Raspberry Pico W,	arduino:mbed_rp2040:pico

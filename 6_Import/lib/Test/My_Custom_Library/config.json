@@ -1,0 +1,22 @@
+{
+    "name": "My_Custom_Library",
+    "files": {
+        "arduino": {
+            "path": "./matiec",
+            "module": {
+                "path": "./matiec/module",
+                "modules": []
+            }
+        },
+        "matiec": {
+            "path": "./matiec"
+        },
+        "xml": {
+            "path": "./plcopen"
+        }
+    },
+    "generated": true,
+    "blocks": [
+        "Test"
+    ]
+}

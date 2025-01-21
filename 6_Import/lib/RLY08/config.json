@@ -1,0 +1,26 @@
+{
+    "name": "RLY08",
+    "files": {
+        "arduino": {
+            "path": "./arduino",
+            "module": {
+                "path": "./arduino/module",
+                "modules": [
+                    "I2C"
+                ]
+            }
+        },
+        "matiec": {
+            "path": "./matiec"
+        },
+        "xml": {
+            "path": "./plcopen"
+        }
+    },
+    "generated": true,
+    "blocks": [
+        "RLY_1",
+        "RLY_8",
+        "SET_ADDR"
+    ]
+}

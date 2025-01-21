@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "C:/Users/mathi/OpenPLC_Editor"
+    },
+    {
+      "name": "I2C",
+      "path": "3_Arduino/I2C"
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "*.vs": "glsl",
+      "stm32can.c": "cpp",
+      "cstddef": "cpp",
+      "compare": "cpp",
+      "cstdint": "cpp",
+      "ds18b20.c": "cpp",
+      "*.tcc": "c",
+      "rope": "c",
+      "arduinocan.c": "cpp",
+      "ranges": "cpp",
+      "bitset": "c",
+      "set": "c",
+      "format": "c",
+      "string": "c",
+      "ratio": "c"
+    },
+    "[plaintext]": {
+      "editor.tabSize": 2
+    }
+  }
+}
