@@ -1,27 +1,20 @@
 {
-    "name": "AW9523B",
-    "files": {
-        "arduino": {
-            "path": "./arduino",
-            "module": {
-                "path": "./arduino/module",
-                "modules": [
-                    "I2C"
-                ]
-            }
-        },
-        "matiec": {
-            "path": "./matiec"
-        },
-        "xml": {
-            "path": "./plcopen"
-        }
+  "name": "AW9523B",
+  "files": {
+    "arduino": {
+      "path": "./arduino",
+      "module": {
+        "path": "./arduino/module",
+        "modules": ["I2C"]
+      }
     },
-    "generated": true,
-    "blocks": [
-        "DI_1",
-        "DQ_1",
-        "DI_8",
-        "DQ_8"
-    ]
+    "matiec": {
+      "path": "./matiec"
+    },
+    "xml": {
+      "path": "./plcopen"
+    }
+  },
+  "generated": true,
+  "blocks": ["DI_1", "DQ_1", "DI_8", "DQ_8"]
 }
