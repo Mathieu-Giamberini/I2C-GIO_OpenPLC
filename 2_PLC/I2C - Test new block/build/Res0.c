@@ -17,7 +17,7 @@ extern unsigned long long common_ticktime__;
 #include "POUS.c"
 
 BOOL TASK0;
-LED_TEST1 RES0__INSTANCE0;
+LED_TEST2 RES0__INSTANCE0;
 #define INSTANCE0 RES0__INSTANCE0
 
 void RES0_init__(void) {
@@ -25,13 +25,13 @@ void RES0_init__(void) {
   retain = 0;
   
   TASK0 = __BOOL_LITERAL(FALSE);
-  LED_TEST1_init__(&INSTANCE0,retain);
+  LED_TEST2_init__(&INSTANCE0,retain);
 }
 
 void RES0_run__(unsigned long tick) {
   TASK0 = !(tick % 1);
   if (TASK0) {
-    LED_TEST1_body__(&INSTANCE0);
+    LED_TEST2_body__(&INSTANCE0);
   }
 }
 
