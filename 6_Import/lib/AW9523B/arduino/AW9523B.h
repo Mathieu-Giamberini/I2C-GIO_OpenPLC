@@ -5,6 +5,7 @@ byte read(byte addr, byte reg);
 void write(byte addr, byte reg, byte value);
 void write_bit(byte addr, byte reg, byte n, bool value);
 
+void print_hex_on_serial(byte num);
 bool getBit(byte b, int pos);
 
 static byte read_reg(bool P_AD) { return !P_AD ? 0x00 : 0x01; }
@@ -73,6 +74,9 @@ static void DI_1_body__(DI_1 *data__)
     byte side_value = read(addr, read_reg(side));
     SetFbVar(PIN, getBit(side_value, i_pin));
 
+    // Debug
+    // print_hex_on_serial(side_value);
+
 #undef GetFbVar
 #undef SetFbVar
 
@@ -132,6 +136,9 @@ static void DQ_1_body__(DQ_1 *data__)
 
     // Write pin
     write_bit(addr, write_reg(side), i_pin, GetFbVar(PIN));
+
+    // Debug
+    // print_hex_on_serial(GetFbVar(PIN));
 
 #undef GetFbVar
 #undef SetFbVar
@@ -215,6 +222,9 @@ static void DI_8_body__(DI_8 *data__)
     SetBool(PX_6, side_reg, 6);
     SetBool(PX_7, side_reg, 7);
 
+    // Debug
+    // print_hex_on_serial(side_reg);
+
 #undef SetBool
 #undef GetFbVar
 #undef SetFbVar
@@ -297,6 +307,9 @@ static void DQ_8_body__(DQ_8 *data__)
 
     // Write side
     write(addr, write_reg(GetFbVar(X)), side_reg);
+
+    // Debug
+    // print_hex_on_serial(side_reg);
 
 #undef PushAdd
 #undef GetFbVar
